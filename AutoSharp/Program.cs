@@ -68,8 +68,8 @@ namespace AutoSharp
                 Game.OnEnd += OnEnd;
                 //Obj_AI_Base.OnIssueOrder += AntiShrooms;
                 Game.OnUpdate += AntiShrooms2;
-                Spellbook.OnCastSpell += OnCastSpell;
-                Obj_AI_Base.OnDamage += OnDamage;
+               // Spellbook.OnCastSpell += OnCastSpell;
+                //Obj_AI_Base.OnDamage += OnDamage;
             
             /*
             Orbwalker = new MyOrbwalker.Orbwalker(orbwalker);
@@ -84,18 +84,18 @@ namespace AutoSharp
              */
         }
 
-        public static void OnDamage(AttackableUnit sender, AttackableUnitDamageEventArgs args)
-        {
-            if (sender == null) return;
-            if (args.Target.NetworkId == ObjectManager.Player.NetworkId && (sender is Obj_AI_Turret || sender is Obj_AI_Minion))
-            {
-                Orbwalker.OrbwalkTo(
-                    Heroes.Player.Position.Extend(Wizard.GetFarthestMinion().Position, 500).RandomizePosition());
-            }
-        }
+       // public static void OnDamage(AttackableUnit sender, AttackableUnitDamageEventArgs args)
+       // {
+           // if (sender == null) return;
+           // if (args.Target.NetworkId == ObjectManager.Player.NetworkId && (sender is Obj_AI_Turret || sender is Obj_AI_Minion))
+           // {
+              //  Orbwalker.OrbwalkTo(
+               //     Heroes.Player.Position.Extend(Wizard.GetFarthestMinion().Position, 500).RandomizePosition());
+           // }
+      //  }
 
-        private static void AntiShrooms2(EventArgs args)
-        {
+      //  private static void AntiShrooms2(EventArgs args)
+       // {
             /*
             if (Map == Utility.Map.MapType.SummonersRift && !Heroes.Player.InFountain() &&
                 Heroes.Player.HealthPercent < Config.Item("recallhp").GetValue<Slider>().Value)
@@ -118,10 +118,10 @@ namespace AutoSharp
                 Orbwalker.SetOrbwalkingPoint(Heroes.Player.Position.Extend(HeadQuarters.AllyHQ.Position, 950));
             }
              * */
-        }
+       // }
 
-        private static void OnCastSpell(Spellbook sender, SpellbookCastSpellEventArgs args)
-        {
+       // private static void OnCastSpell(Spellbook sender, SpellbookCastSpellEventArgs args)
+        //{
             /*
             if (sender.Owner.IsMe)
             {
