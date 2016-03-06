@@ -54,7 +54,7 @@ namespace AutoSharp.Utils
         /// <summary>
         /// Returns the position on the path after t milliseconds at speed speed.
         /// </summary>
-        public static Vector2 PositionAfter(this GamePath self, int t, int speed, int delay = 0)
+        //public static Vector2 PositionAfter(this GamePath self, int t, int speed, int delay = 0)
         {
             var distance = Math.Max(0, t - delay)*speed/1000;
             for (var i = 0; i <= self.Count - 2; i++)
