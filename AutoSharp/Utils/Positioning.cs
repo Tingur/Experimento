@@ -79,7 +79,7 @@ namespace AutoSharp.Utils
 
             var team = Heroes.AllyHeroes.Where(h => !h.IsMe && !h.IsDead && h.Distance(farthestAlly) < 500 && h.Position.CountEnemiesInRange(550) <= h.Position.CountAlliesInRange(550)).ToList();
 
-            var teamPoly = team.Select(hero => new Geometry.Circle(hero.Position.To2D(), 200).ToPolygon()).ToList();
+           // var teamPoly = team.Select(hero => new Geometry.Circle(hero.Position.To2D(), 200).ToPolygon()).ToList();
 
             foreach (var hp in teamPoly)
             {
@@ -151,12 +151,12 @@ namespace AutoSharp.Utils
         /// </summary>
         internal static Paths AllyZone()
         {
-            var teamPolygons = new List<Geometry.Polygon>();
+            //var teamPolygons = new List<Geometry.Polygon>();
             foreach (var hero in Heroes.AllyHeroes.Where(h => !h.IsMe && !h.IsDead && h.HealthPercent > 10 && !(h.InFountain())))
             {
                 teamPolygons.Add(GetChampionRangeCircle(hero).ToPolygon());
             }
-            var teamPaths = Geometry.ClipPolygons(teamPolygons);
+            //var teamPaths = Geometry.ClipPolygons(teamPolygons);
             var newTeamPaths = teamPaths;
             foreach (var pathList in teamPaths)
             {
@@ -178,12 +178,12 @@ namespace AutoSharp.Utils
         /// </summary>
         internal static Paths EnemyZone()
         {
-            var teamPolygons = new List<Geometry.Polygon>();
+            //var teamPolygons = new List<Geometry.Polygon>();
             foreach (var hero in Heroes.EnemyHeroes.Where(h => !h.IsDead && h.IsVisible))
             {
                 teamPolygons.Add(GetChampionRangeCircle(hero).ToPolygon());
             }
-            var teamPaths = Geometry.ClipPolygons(teamPolygons);
+            //var teamPaths = Geometry.ClipPolygons(teamPolygons);
             var newTeamPaths = teamPaths;
             foreach (var pathList in teamPaths)
             {
@@ -204,7 +204,7 @@ namespace AutoSharp.Utils
         /// Returns a circle with center at hero position and radius of the highest impact range a hero has.
         /// </summary>
         /// <param name="hero">The target hero.</param>
-        internal static Geometry.Circle GetChampionRangeCircle(AIHeroClient hero)
+        //internal static Geometry.Circle GetChampionRangeCircle(AIHeroClient hero)
         {
             var heroSpells = new List<SpellData>
             {
@@ -216,9 +216,9 @@ namespace AutoSharp.Utils
             if (spellsOrderedByRange.FirstOrDefault() != null)
             {
                 var highestSpellRange = spellsOrderedByRange.FirstOrDefault().CastRange;
-                return new Geometry.Circle(hero.ServerPosition.To2D(), highestSpellRange > hero.AttackRange ? highestSpellRange : hero.AttackRange);
+                //return new Geometry.Circle(hero.ServerPosition.To2D(), highestSpellRange > hero.AttackRange ? highestSpellRange : hero.AttackRange);
             }
-            return new Geometry.Circle(hero.ServerPosition.To2D(), hero.AttackRange);
+            //return new Geometry.Circle(hero.ServerPosition.To2D(), hero.AttackRange);
         }
 
         /// <summary>
@@ -226,9 +226,9 @@ namespace AutoSharp.Utils
         /// </summary>
         /// <param name="allyTeam">returns the polygon for ally team if true, enemy if false</param>
         /// <returns></returns>
-        internal static Geometry.Polygon GetTeamPolygon(bool allyTeam = true)
+        //internal static Geometry.Polygon GetTeamPolygon(bool allyTeam = true)
         {
-            var poly = new Geometry.Polygon();
+            //var poly = new Geometry.Polygon();
             foreach (var v2 in allyTeam ? GetAllyPosList() : GetEnemyPosList())
             {
                 poly.Add(v2);
