@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using ClipperLib;
 using EloBuddy;
-//using EloBuddy.SDK;
+using EloBuddy.SDK;
 using SharpDX;
 using Color = System.Drawing.Color;
 using Path = System.Collections.Generic.List<ClipperLib.IntPoint>;
