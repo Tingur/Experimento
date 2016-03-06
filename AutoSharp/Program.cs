@@ -62,14 +62,14 @@ namespace AutoSharp
             // Moved it to another addon: ChampionPlugins
             //new PluginLoader();
             
-                //Cache.Load(); 
-                //Game.OnUpdate += Positioning.OnUpdate;
+                Cache.Load(); 
+                Game.OnUpdate += Positioning.OnUpdate;
                 Autoplay.Load();
-                //Game.OnEnd += OnEnd;
+                Game.OnEnd += OnEnd;
                 //Obj_AI_Base.OnIssueOrder += AntiShrooms;
-                //Game.OnUpdate += AntiShrooms2;
-                //Spellbook.OnCastSpell += OnCastSpell;
-                //Obj_AI_Base.OnDamage += OnDamage;
+                Game.OnUpdate += AntiShrooms2;
+                Spellbook.OnCastSpell += OnCastSpell;
+                Obj_AI_Base.OnDamage += OnDamage;
             
             /*
             Orbwalker = new MyOrbwalker.Orbwalker(orbwalker);
