@@ -63,7 +63,7 @@ namespace AutoSharp
             //new PluginLoader();
             
                 Cache.Load(); 
-                Game.OnUpdate += Ppppositioning.OnUpdate;
+                Game.OnUpdate += Positioning.OnUpdate;
                 Autoplay.Load();
                 Game.OnEnd += OnEnd;
                 //Obj_AI_Base.OnIssueOrder += AntiShrooms;
