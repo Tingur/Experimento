@@ -1,4 +1,3 @@
-/*
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -286,4 +285,3 @@ namespace AutoSharp.Utils
         #endregion
     }
 }
-*/
