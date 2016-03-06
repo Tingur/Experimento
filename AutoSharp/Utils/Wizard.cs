@@ -1,5 +1,4 @@
-/*
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using EloBuddy;
@@ -60,7 +59,6 @@ namespace AutoSharp.Utils
             // add h.IsMe ? 
             return EntityManager.Heroes.Allies.Count(h => h.Distance(pos) <= range);
         }*/
-        /*
         public static Obj_AI_Turret GetClosestEnemyTurret(this Vector3 point)
         {
             return Turrets.EnemyTurrets.OrderBy(t => t.Distance(point)).FirstOrDefault();
@@ -241,59 +239,50 @@ namespace AutoSharp.Utils
         {
             return spell.IsReady() && target.IsValidTarget() && !ObjectManager.Player.UnderTurret(true);
         }
-
         public static bool CastCheck(this Spell spell, Obj_AI_Base target, bool range = true, bool team = true)
         {
             return spell.IsReady() && target.IsValidTarget() && !ObjectManager.Player.UnderTurret(true);
         }
-
         public static bool IsInRange(this Spell spell, Obj_AI_Base target)
         {
             return ObjectManager.Player.Distance(target) < spell.Range;
         }
-
         public static bool IsInRange(this Items.Item item, Obj_AI_Base target)
         {
             return ObjectManager.Player.Distance(target) < item.Range;
         }
-
         public static bool WillKill(this Obj_AI_Base caster, Obj_AI_Base target, string spell, int buffer = 10)
         {
             if (target == null) return false;
             return caster.Spellbook.GetSpell(spell)GetSpellDamage(target, spell) >= target.HealthBuffer(buffer);
         }
-
         public static bool WillKill(this Obj_AI_Base caster, Obj_AI_Base target, SpellData spell, int buffer = 10)
         {
             if (target == null) return false;
             return caster.GetSpellDamage(target, spell.Name) >= target.HealthBuffer(buffer);
         }
-
         public static void AddList(this Menu menu, string name, string displayName, string[] list)
         {
             menu.AddItem(
                 new MenuItem("autosharp." + ObjectManager.Player.ChampionName + "." + name, displayName).SetValue(new StringList(list)));
         }
-
         public static void AddBool(this Menu menu, string name, string displayName, bool value)
         {
             menu.AddItem(new MenuItem("autosharp." + ObjectManager.Player.ChampionName + "." + name, displayName).SetValue(value));
         }
-
         public static void AddSlider(this Menu menu, string name, string displayName, int value, int min, int max)
         {
             menu.AddItem(
                 new MenuItem("autosharp." + ObjectManager.Player.ChampionName + "." + name, displayName).SetValue(
                     new Slider(value, min, max)));
         }
-
         public static void AddObject(this Menu menu, string name, string displayName, object value)
         {
             menu.AddItem(new MenuItem("autosharp." + ObjectManager.Player.ChampionName + "." + name, displayName).SetValue(value));
         }
         */
     }
-/*
+
     internal static class Wizard
     {
         private static int TimeSinceLastTakenDecision = 0;
@@ -394,4 +383,3 @@ namespace AutoSharp.Utils
         }
     }
 }
-*/
