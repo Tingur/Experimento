@@ -21,7 +21,7 @@ namespace AutoSharp.Utils
             Drawing.DrawLine(from[0], from[1], to[0], to[1], width, color);
             //Drawing.DrawLine(from.X, from.Y, to.X, to.Y, width, color);
         }
-
+*/
         public static float RadianToDegree(double angle)
         {
             return (float) (angle*(180.0/Math.PI));
@@ -298,4 +298,4 @@ namespace AutoSharp.Utils
         }
     }
 }
-*/
+
