@@ -1,3 +1,4 @@
+/*
 ﻿namespace AutoSharp.Utils
 {
     internal class AutoLevel
@@ -381,3 +382,4 @@
         }
     }
 }
+*/
