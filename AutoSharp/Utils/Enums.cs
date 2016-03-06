@@ -1,4 +1,4 @@
-/*
+
 ﻿namespace AutoSharp.Utils
 {
     public class Enums
@@ -13,4 +13,4 @@
         }
     }
 }
-*/
+
