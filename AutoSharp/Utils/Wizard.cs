@@ -1,3 +1,4 @@
+/*
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -59,6 +60,7 @@ namespace AutoSharp.Utils
             // add h.IsMe ? 
             return EntityManager.Heroes.Allies.Count(h => h.Distance(pos) <= range);
         }*/
+        /*
         public static Obj_AI_Turret GetClosestEnemyTurret(this Vector3 point)
         {
             return Turrets.EnemyTurrets.OrderBy(t => t.Distance(point)).FirstOrDefault();
@@ -291,7 +293,7 @@ namespace AutoSharp.Utils
         }
         */
     }
-
+/*
     internal static class Wizard
     {
         private static int TimeSinceLastTakenDecision = 0;
@@ -392,3 +394,4 @@ namespace AutoSharp.Utils
         }
     }
 }
+*/
