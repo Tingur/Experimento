@@ -73,6 +73,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Auto\Autoplay.cs" />
     <Compile Include="Auto\HowlingAbyss\ARAMShopAI\BuyItemEvent.cs" />
     <Compile Include="Auto\HowlingAbyss\ARAMShopAI\CustomEvents.cs" />
     <Compile Include="Auto\HowlingAbyss\ARAMShopAI\AramItem.cs" />
