@@ -82,7 +82,6 @@ namespace AutoSharp
                         Console.WriteLine("AutoLevel Init Success!");
                     });
              */
-        /*    
         }
 
         public static void OnDamage(AttackableUnit sender, AttackableUnitDamageEventArgs args)
@@ -97,7 +96,6 @@ namespace AutoSharp
 
         private static void AntiShrooms2(EventArgs args)
         {
-        */
             /*
             if (Map == Utility.Map.MapType.SummonersRift && !Heroes.Player.InFountain() &&
                 Heroes.Player.HealthPercent < Config.Item("recallhp").GetValue<Slider>().Value)
@@ -113,7 +111,6 @@ namespace AutoSharp
                     }
                 }
             }
-
             var turretNearTargetPosition =
                     Turrets.EnemyTurrets.FirstOrDefault(t => t.Distance(Heroes.Player.ServerPosition) < 950);
             if (turretNearTargetPosition != null && turretNearTargetPosition.CountNearbyAllyMinions(950) < 3)
@@ -190,7 +187,6 @@ namespace AutoSharp
                     args.Process = false;
                     return;
                 }
-
                 if (args.Order == GameObjectOrder.MoveTo)
                 {
                     if (args.TargetPosition.IsZero)
@@ -216,9 +212,7 @@ namespace AutoSharp
                         return;
                     }
                 }
-
                 #region BlockAttack
-
                 if (args.Target != null && args.Order == GameObjectOrder.AttackUnit || args.Order == GameObjectOrder.AttackTo)
                 {
                     if (Config.Item("onlyfarm").GetValue<bool>() && args.Target.IsValid<Obj_AI_Hero>())
@@ -256,7 +250,6 @@ namespace AutoSharp
                         return;
                     }
                 }
-
                 #endregion
             }
             if (sender != null && args.Target != null && args.Target.IsMe)
