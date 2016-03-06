@@ -1,3 +1,4 @@
+/*
 ﻿using AutoSharp.Auto.HowlingAbyss;
 using AutoSharp.Auto.SummonersRift;
 using EloBuddy;
@@ -63,3 +64,4 @@ namespace AutoSharp.Auto
         }
     }
 }
+*/
