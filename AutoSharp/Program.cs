@@ -1,8 +1,9 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using AutoSharp.Auto;
+using AutoSharp.Utils;
 using EloBuddy;
 using EloBuddy.SDK;
 using EloBuddy.SDK.Menu;
@@ -81,6 +82,7 @@ namespace AutoSharp
                         Console.WriteLine("AutoLevel Init Success!");
                     });
              */
+        /*    
         }
 
         public static void OnDamage(AttackableUnit sender, AttackableUnitDamageEventArgs args)
@@ -95,6 +97,7 @@ namespace AutoSharp
 
         private static void AntiShrooms2(EventArgs args)
         {
+        */
             /*
             if (Map == Utility.Map.MapType.SummonersRift && !Heroes.Player.InFountain() &&
                 Heroes.Player.HealthPercent < Config.Item("recallhp").GetValue<Slider>().Value)
