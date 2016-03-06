@@ -8,20 +8,20 @@ using Color = System.Drawing.Color;
 using Path = System.Collections.Generic.List<ClipperLib.IntPoint>;
 using Paths = System.Collections.Generic.List<System.Collections.Generic.List<ClipperLib.IntPoint>>;
 using GamePath = System.Collections.Generic.List<SharpDX.Vector2>;
-/*
+
 namespace AutoSharp.Utils
 {
     public static class Geometry
     {
 
-        public static void DrawLineInWorld(Vector3 start, Vector3 end, int width, Color color)
+        //public static void DrawLineInWorld(Vector3 start, Vector3 end, int width, Color color)
         {
             var from = Drawing.WorldToScreen(start);
             var to = Drawing.WorldToScreen(end);
             Drawing.DrawLine(from[0], from[1], to[0], to[1], width, color);
             //Drawing.DrawLine(from.X, from.Y, to.X, to.Y, width, color);
         }
-*/
+
         public static float RadianToDegree(double angle)
         {
             return (float) (angle*(180.0/Math.PI));
