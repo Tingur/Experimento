@@ -73,7 +73,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Auto\Autoplay.cs" />
     <Compile Include="Auto\HowlingAbyss\ARAMShopAI\BuyItemEvent.cs" />
     <Compile Include="Auto\HowlingAbyss\ARAMShopAI\CustomEvents.cs" />
     <Compile Include="Auto\HowlingAbyss\ARAMShopAI\AramItem.cs" />
@@ -94,13 +93,6 @@
     <Compile Include="PluginLoader.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Utils\AutoLevel.cs" />
-    <Compile Include="Utils\Cache.cs" />
-    <Compile Include="Utils\Enums.cs" />
-    <Compile Include="Utils\Helpers.cs" />
-    <Compile Include="Utils\Positioning.cs" />
-    <Compile Include="Utils\Wizard.cs" />
-    <Compile Include="Utils\Geometry.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
