@@ -16,7 +16,7 @@ namespace AutoSharp.Utils
 
         public static void DrawLineInWorld(Vector3 start, Vector3 end, int width, Color color)
         {
-            var from = Drawing.WorldToScreen(start);
+            //var from = Drawing.WorldToScreen(start);
             var to = Drawing.WorldToScreen(end);
             Drawing.DrawLine(from[0], from[1], to[0], to[1], width, color);
             //Drawing.DrawLine(from.X, from.Y, to.X, to.Y, width, color);
