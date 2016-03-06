@@ -1,3 +1,4 @@
+/*
 ﻿using System;
 using System.Windows.Forms;
 using EloBuddy;
@@ -87,3 +88,4 @@ namespace AutoSharp.Plugins
         }
     }
 }
+*/
