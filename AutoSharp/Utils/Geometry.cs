@@ -14,7 +14,7 @@ namespace AutoSharp.Utils
     public static class Geometry
     {
 
-        //public static void DrawLineInWorld(Vector3 start, Vector3 end, int width, Color color)
+        public static void DrawLineInWorld(Vector3 start, Vector3 end, int width, Color color)
         {
             var from = Drawing.WorldToScreen(start);
             var to = Drawing.WorldToScreen(end);
