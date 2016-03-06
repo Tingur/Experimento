@@ -1,4 +1,3 @@
-/*
 using System;
 using System.Collections.Generic;
 using ClipperLib;
@@ -299,4 +298,3 @@ namespace AutoSharp.Utils
         }
     }
 }
-*/
